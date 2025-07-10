@@ -15,8 +15,7 @@ class EventStream
     ) {
         $this->headers();
         ob_implicit_flush();
-        
-        // Somente finaliza buffer se houver um
+
         if (ob_get_level() > 0) {
             ob_end_flush();
         }
